@@ -1,0 +1,162 @@
+.notice {
+  background: var(--color-mint-soft);
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 9px 20px;
+}
+.header {
+  height: 104px;
+  position: relative;
+  z-index: 20;
+  background: var(--color-canvas);
+}
+.inner {
+  width: var(--container);
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 100%;
+}
+.desktop {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin-left: auto;
+}
+.desktop a {
+  font-size: 13px;
+  text-decoration: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.desktop a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.hours {
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.hours span {
+  font-size: 14px;
+}
+.desktopCta a {
+  font-size: 14px;
+  min-height: 48px;
+  padding: 12px 18px;
+  gap: 20px;
+}
+.sticky {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 76px;
+  box-shadow: 0 5px 22px #2027250b;
+  animation: appear 0.2s ease-out;
+}
+.menuButton {
+  display: none;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-line);
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  inset: 0;
+  margin: 0;
+}
+.dialog::backdrop {
+  background: #20272588;
+}
+.menuPanel {
+  background: var(--color-canvas);
+  padding: 24px;
+  max-width: 480px;
+  min-height: 100%;
+  margin-left: auto;
+}
+.menuTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.menuPanel nav {
+  display: grid;
+}
+.menuPanel nav a {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 23px;
+  text-decoration: none;
+}
+.menuPanel p {
+  margin-top: 40px;
+  color: var(--color-ink-muted);
+  font-size: 14px;
+}
+@keyframes appear {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: none;
+  }
+}
+@media (max-width: 1200px) {
+  .hours {
+    display: none;
+  }
+  .desktop {
+    gap: 16px;
+  }
+  .inner {
+    gap: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .header {
+    height: 88px;
+  }
+  .desktop,
+  .desktopCta {
+    display: none;
+  }
+  .menuButton {
+    display: flex;
+  }
+  .inner {
+    justify-content: space-between;
+  }
+  .sticky {
+    height: 72px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sticky {
+    animation: none;
+  }
+}
+.headerSpace {
+  height: 104px;
+}
+@media (max-width: 1000px) {
+  .headerSpace {
+    height: 88px;
+  }
+}

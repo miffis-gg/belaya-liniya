@@ -1,0 +1,102 @@
+.faq {
+  width: var(--container);
+  max-width: 1320px;
+  margin: auto;
+  padding: var(--section-space) 0;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 96px;
+  border-top: 1px solid var(--color-line);
+}
+.intro h2 {
+  font-size: clamp(36px, 3.6vw, 58px);
+}
+.intro p {
+  font-size: 14px;
+  color: var(--color-ink-muted);
+  max-width: 320px;
+  margin-top: 24px;
+}
+.intro > a {
+  display: inline-block;
+  font-size: 12px;
+  max-width: 280px;
+  line-height: 1.7;
+  text-underline-offset: 4px;
+  margin-top: 16px;
+  min-height: 44px;
+}
+.item {
+  border-top: 1px solid var(--color-line);
+}
+.item:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+.item h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.item button {
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  font: inherit;
+}
+.item button svg {
+  flex-shrink: 0;
+}
+.item button:hover {
+  color: var(--color-forest);
+}
+.item p {
+  margin: 0;
+  padding: 0 40px 24px 0;
+  font-size: 14px;
+  color: var(--color-ink-muted);
+  max-width: 68ch;
+}
+@media (max-width: 900px) {
+  .faq {
+    gap: 40px;
+    grid-template-columns: 1fr 1.4fr;
+  }
+}
+@media (max-width: 600px) {
+  .faq {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .intro h2 {
+    font-size: 39px;
+  }
+  .intro h2 br {
+    display: none;
+  }
+  .intro p {
+    max-width: none;
+  }
+  .intro a {
+    max-width: none;
+  }
+  .item h3 {
+    font-size: 17px;
+  }
+  .item button {
+    padding-block: 20px;
+    gap: 18px;
+  }
+  .item p {
+    padding-right: 0;
+  }
+}
+.intro p,
+.item p {
+  font-size: 16px;
+}

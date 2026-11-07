@@ -1,0 +1,27 @@
+:root {
+  --color-canvas: #f5f3ed;
+  --color-surface: #fffefa;
+  --color-ink: #202725;
+  --color-ink-muted: #59615e;
+  --color-mint: #a8d8c8;
+  --color-mint-soft: #ddede6;
+  --color-forest: #245e52;
+  --color-apricot: #e8b18c;
+  --color-line: #c9cec9;
+  --color-error: #a63f3f;
+  --color-focus: #0a6658;
+  --gutter: 72px;
+  --container: calc(100% - 2 * var(--gutter));
+  --section-space: clamp(72px, 8vw, 128px);
+}
+@media (max-width: 1200px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --gutter: 20px;
+    --section-space: 72px;
+  }
+}
